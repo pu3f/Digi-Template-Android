@@ -1,15 +1,15 @@
 # Digi-Template-Android
 Template project for Android Version 0.0.1
 
-#Gradle
-    #Project Level
+Gradle
+    - Project Level
         - Declare environment setup
             - Base Url
             - Asset Url
             - Key
             - etc
 
-    #Module Level
+    - Module Level
         - Create build types (Default is development and production)
             - debug
                 - set package name {package_name}.debug -> so it has different package with the release version
@@ -20,10 +20,10 @@ Template project for Android Version 0.0.1
                 - set proguard rules
     Notes : Please add another build types depends on requirement and needs
 
-#View Binding
+View Binding
     - Use view binding in each module to ease development
 
-#Modules
+Modules
     - We use multi modules in each project
     - Each project must have 3 modules for minimum
         - app (main module) -> required
@@ -42,7 +42,7 @@ Template project for Android Version 0.0.1
         - featureC
         - etc
 
-#MVVM
+MVVM
     - MVVM is the preferred design pattern
     - each module has its own mvvm implementation
     - preferred package structure
@@ -63,11 +63,11 @@ Template project for Android Version 0.0.1
     - use RxJava/Coroutines for api request or room
     - use dependency injection
 
-#Sqlite
+Sqlite
     - use Room from Android Jetpack
 
-#Proguard
+Proguard
     - used before release
     - All release product must implement proguard
 
-#DELETE ALL LOG BEFORE RELEASE A PRODUCT!!!
+DELETE ALL LOG BEFORE RELEASE A PRODUCT!!!
