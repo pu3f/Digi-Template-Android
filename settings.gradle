@@ -24,3 +24,5 @@ rootProject.name = "DigiTemplate"
 include ':app'
 include ':DigiCore'
 include ':DigiUIKit'
+include ':FeatureA'
+include ':FeatureB'

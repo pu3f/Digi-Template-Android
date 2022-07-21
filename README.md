@@ -8,6 +8,7 @@ Gradle
         - Asset Url
         - Key
         - etc
+
 #Module Level
     - Create build types (Default is development and production)
         - debug
@@ -32,6 +33,7 @@ Gradle
             - reusable color
             - reusable asset/drawable
             - font
+            - dimens
         - digicore (navigation, shared pref, reusable library, common utils, etc) -> required
             - use PrefUtils to save/read shared pref
             - use AppNavigation to navigate between module/feature
@@ -41,3 +43,6 @@ Gradle
         - etc
 
 #MVVM
+
+#Sqlite
+    - use Room from Android Jetpack

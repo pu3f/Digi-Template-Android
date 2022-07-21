@@ -8,7 +8,9 @@
         <entry key="..\:/android-wd/DigiTemplate/DigiUIKit/src/main/res/drawable/whitecardblackcornerdua.xml" value="0.121" />
         <entry key="..\:/android-wd/DigiTemplate/DigiUIKit/src/main/res/drawable/yellowround.xml" value="0.121" />
         <entry key="..\:/android-wd/DigiTemplate/DigiUIKit/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.121" />
-        <entry key="..\:/android-wd/DigiTemplate/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/android-wd/DigiTemplate/FeatureA/src/main/res/layout/activity_feature_aactivity.xml" value="0.25" />
+        <entry key="..\:/android-wd/DigiTemplate/FeatureB/src/main/res/layout/activity_feature_bactivity.xml" value="0.2359375" />
+        <entry key="..\:/android-wd/DigiTemplate/app/src/main/res/layout/activity_main.xml" value="0.264" />
       </map>
     </option>
   </component>
