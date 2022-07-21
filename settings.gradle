@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "DigiTemplate"
 include ':app'
 include ':DigiCore'
+include ':DigiUIKit'

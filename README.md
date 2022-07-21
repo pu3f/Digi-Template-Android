@@ -27,6 +27,11 @@ Gradle
     - Each project must have 3 modules for minimum
         - app (main module) -> required
         - digiuikit (custom component, ui library, color, strings, etc) -> required
+            - librarty for UI
+            - custom UI component
+            - reusable color
+            - reusable asset/drawable
+            - font
         - digicore (navigation, shared pref, reusable library, common utils, etc) -> required
             - use PrefUtils to save/read shared pref
             - use AppNavigation to navigate between module/feature

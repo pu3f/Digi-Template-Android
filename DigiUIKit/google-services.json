@@ -1,0 +1,442 @@
+{
+  "project_info": {
+    "project_number": "10488261480",
+    "project_id": "bintaro-jaya-apps",
+    "storage_bucket": "bintaro-jaya-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:3f1d30c1e66d970b5ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.digicore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:e20ea4900b6757e95ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.digiuikit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:f8534c08eaed15b65ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:163893a3b2385a395ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jaya.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:4784a100101976a25ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jayaauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:a28fbfef8b1c70dc5ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jayabilling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:cc41e73436e2ab535ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jayacomplain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:b0d39025e9d5aecd5ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jayaevent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:ef04fcab5182c7295ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jayafacilities"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:df7bf77895b592cd5ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jayanews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:97938baa5168493c5ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jayapromotion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10488261480:android:c9a908c987f4335f5ac4dd",
+        "android_client_info": {
+          "package_name": "com.digimaster.jayatransportation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BVUKv4Pr4wbNKs4n2GkBkenMfyXJ8cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10488261480-032e12n39hj11gfqutq1ahehe2h0kou9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10488261480-q6c0t1mu477kci9l7vamr346jqdbjk07.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digimaster.ProjectJaya"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

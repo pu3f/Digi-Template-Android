@@ -1,43 +1,45 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('PATH_TO_KEYSTORE.jks')
+            storePassword 'password'
+            keyAlias 'alias'
+            keyPassword 'password'
+        }
+    }
     compileSdk 32
     buildToolsVersion '32.1.0-rc1'
-    defaultConfig {
-        applicationId "com.digimaster.template"
-        minSdk 21
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
-        multiDexEnabled true
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
 
+    defaultConfig {
+        minSdkVersion MIN_VERSION
+        targetSdk 32
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
     buildFeatures {
         viewBinding true
     }
-
     buildTypes {
         debug {
-            applicationIdSuffix ".debug"
             buildConfigField "String", "BASE_URL", BASE_URL_DEVELOPMENT
             minifyEnabled false
         }
 
         release {
+            minifyEnabled false
             buildConfigField "String", "BASE_URL", BASE_URL_PROUCTION
-            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
-
-        /*
-        Add another build type/variant here
-         */
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -48,13 +50,23 @@ android {
 }
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation project(path: ':DigiCore')
-    implementation project(path: ':DigiUIKit')
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    api 'com.google.android.material:material:1.6.1'
+
+    //Custom
+    api 'de.hdodenhof:circleimageview:3.1.0'
+    api 'com.github.SakaGamer:html-textview:1.0.8'
+    api 'org.sufficientlysecure:html-textview:4.0'
+
+    //lottie
+    api 'com.airbnb.android:lottie:5.0.3'
+
+    //Glide
+    api 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 }
