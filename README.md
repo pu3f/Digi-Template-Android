@@ -28,7 +28,7 @@ Modules
 - Each project must have 3 modules for minimum
     - app (main module) -> required
     - digiuikit (custom component, ui library, color, strings, etc) -> required
-        - librarty for UI
+        - library for UI
         - custom UI component
         - reusable color
         - reusable asset/drawable
