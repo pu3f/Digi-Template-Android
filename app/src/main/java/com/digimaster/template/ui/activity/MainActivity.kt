@@ -8,7 +8,9 @@ import androidx.activity.viewModels
 import com.digimaster.digicore.AppNavigation
 import com.digimaster.template.databinding.ActivityMainBinding
 import com.digimaster.template.ui.viewmodel.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
 

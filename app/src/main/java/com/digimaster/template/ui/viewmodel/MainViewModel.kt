@@ -5,23 +5,18 @@ import androidx.lifecycle.ViewModel
 import com.digimaster.template.data.di.DaggerMainComponent
 import com.digimaster.template.data.repository.MainRepository
 import com.digimaster.template.model.NewsResponse
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class MainViewModel: ViewModel() {
+@HiltViewModel
+class MainViewModel @Inject constructor(private val mainRepository: MainRepository): ViewModel() {
     private val news = MutableLiveData<NewsResponse>()
     private val compositeDisposable = CompositeDisposable()
     private val isError = MutableLiveData<Boolean>()
-
-    @Inject
-    lateinit var mainRepository: MainRepository
-
-    init {
-        DaggerMainComponent.create().injectNews(this)
-    }
 
     fun loadNews(){
         compositeDisposable.add(
