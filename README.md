@@ -46,21 +46,23 @@ MVVM
 - MVVM is the preferred design pattern
 - each module has its own mvvm implementation
 - preferred package structure
-    - ui
-        - activity
-            - observe view state
-        - fragment
-        - adapter
-        - viewmodel
-            - use view state
-    - data
+    - app
         - di
-        - remote (for api request data)
-        - local (for local/room data)
-        - repository
+        - ui
+            - activity
+            - fragment
+            - adapter
+        - viewmodel
+    - data
+        - mappers (map server data model to domain model (ui model))
+        - models (server data model)
+        - repository (domain's repository implementation)
         - service
-    - model
-    - util
+    - domain
+        - models (UI model)
+        - repositories (interfacec)
+        - usecases (business logic, mediator between viewmodel and repository)
+    - util/common
 - use LiveData for communication between activity/fragment with viewmodel
 - use RxJava/Coroutines for api request or room
 - use dependency injection = dagger hilt
@@ -71,5 +73,8 @@ Sqlite
 Proguard
 - used before release
 - All release product must implement proguard
+
+Splash scree
+- use androidx splash screen API
 
 DELETE ALL LOG BEFORE RELEASE A PRODUCT!!!
