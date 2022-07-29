@@ -1,12 +1,15 @@
-package com.digimaster.featurea.ui.viewmodel
+package com.digimaster.featurea.app.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.digimaster.digicore.room.Notification
 import com.digimaster.digicore.utils.ViewState
-import com.digimaster.featurea.data.repository.MainRepository
-import com.digimaster.featurea.model.NewsResponse
+import com.digimaster.featurea.domain.models.NewsModel
+import com.digimaster.featurea.domain.models.NotificationModel
+import com.digimaster.featurea.domain.usecases.GetNewsUseCase
+import com.digimaster.featurea.domain.usecases.GetNotificationUseCase
+import com.digimaster.featurea.domain.usecases.SaveNotificationUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -16,19 +19,23 @@ import io.reactivex.subscribers.DisposableSubscriber
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(private val mainRepository: MainRepository): ViewModel() {
-    private val news = MutableLiveData<ViewState<NewsResponse>>()
-    private val notifications = MutableLiveData<ViewState<List<Notification>>>()
+class MainViewModel @Inject constructor(
+    private val getNewsUseCase: GetNewsUseCase,
+    private val getNotificationUseCase: GetNotificationUseCase,
+    private val saveNotificationUseCase: SaveNotificationUseCase
+) : ViewModel() {
+    private val news = MutableLiveData<ViewState<NewsModel>>()
+    private val notifications = MutableLiveData<ViewState<List<NotificationModel>>>()
     private val compositeDisposable = CompositeDisposable()
 
-    fun loadNews(){
+    fun loadNews() {
         news.value = ViewState.loading(null)
 
         compositeDisposable.add(
-            mainRepository.getNews().subscribeOn(Schedulers.newThread())
+            getNewsUseCase.execute().subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSingleObserver<NewsResponse>(){
-                    override fun onSuccess(t: NewsResponse) {
+                .subscribeWith(object : DisposableSingleObserver<NewsModel>() {
+                    override fun onSuccess(t: NewsModel) {
                         if (t.code == 200) {
                             news.value = ViewState.success(t)
                         } else {
@@ -41,19 +48,19 @@ class MainViewModel @Inject constructor(private val mainRepository: MainReposito
                     }
 
                 }
-        ))
+                ))
     }
 
-    fun loadNotifications(){
+    fun loadNotifications() {
         compositeDisposable.add(
-            mainRepository.loadNotification()
+            getNotificationUseCase.execute()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSubscriber<List<Notification>>(){
-                    override fun onNext(t: List<Notification>) {
-                        if(t.isNotEmpty()){
+                .subscribeWith(object : DisposableSubscriber<List<NotificationModel>>() {
+                    override fun onNext(t: List<NotificationModel>) {
+                        if (t.isNotEmpty()) {
                             notifications.value = ViewState.success(t)
-                        }else{
+                        } else {
                             notifications.value = ViewState.empty("no data")
                         }
                     }
@@ -69,9 +76,9 @@ class MainViewModel @Inject constructor(private val mainRepository: MainReposito
         )
     }
 
-    fun insertNotification(notification: Notification){
+    fun insertNotification(notification: NotificationModel) {
         compositeDisposable.add(
-            mainRepository.insertNotification(notification)
+            saveNotificationUseCase.save(notification)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSingleObserver<Long>(){
@@ -87,9 +94,9 @@ class MainViewModel @Inject constructor(private val mainRepository: MainReposito
         )
     }
 
-    fun getNotifications(): MutableLiveData<ViewState<List<Notification>>> = notifications
+    fun getNotifications(): MutableLiveData<ViewState<List<NotificationModel>>> = notifications
 
-    fun getNews(): MutableLiveData<ViewState<NewsResponse>> = news
+    fun getNews(): MutableLiveData<ViewState<NewsModel>> = news
 
     override fun onCleared() {
         super.onCleared()

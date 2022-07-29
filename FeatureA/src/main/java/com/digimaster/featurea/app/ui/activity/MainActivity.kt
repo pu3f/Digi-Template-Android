@@ -1,4 +1,4 @@
-package com.digimaster.featurea.ui.activity
+package com.digimaster.featurea.app.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,10 +7,10 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.digimaster.digicore.AppNavigation
-import com.digimaster.digicore.room.Notification
 import com.digimaster.digicore.utils.ResponseStatus
 import com.digimaster.featurea.databinding.ActivityMainBinding
-import com.digimaster.featurea.ui.viewmodel.MainViewModel
+import com.digimaster.featurea.app.viewmodel.MainViewModel
+import com.digimaster.featurea.domain.models.NotificationModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnInsertNotification.setOnClickListener {
-            val notification = Notification(title = "Title A", content = "Content A")
+            val notification = NotificationModel(title = "Title A", content = "Content A")
             viewModel.insertNotification(notification)
         }
 
@@ -56,9 +56,9 @@ class MainActivity : AppCompatActivity() {
                     /*
                         handle data if success here
                      */
-                    it.data?.newsDataList?.let { newsList ->
+                    it.data?.newsDataModelList?.let { newsList ->
                         for (news in newsList) {
-                            Log.i("MainActivity", "News Title ${news.newsName}")
+                            Log.i("MainActivity", "News Title $news")
                         }
                     }
                 }

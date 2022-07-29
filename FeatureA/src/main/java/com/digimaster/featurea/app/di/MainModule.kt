@@ -1,12 +1,13 @@
-package com.digimaster.featurea.data.di
+package com.digimaster.featurea.app.di
 
 import com.digimaster.digicore.room.NotificationDao
-import com.digimaster.featurea.data.remote.MainRemoteDataSource
-import com.digimaster.featurea.data.remote.MainRemoteDataSourceImpl
-import com.digimaster.featurea.data.repository.MainRepository
+import com.digimaster.featurea.data.mappers.DataMapper
+import com.digimaster.featurea.domain.repositories.MainRepository
 import com.digimaster.featurea.data.repository.MainRepositoryImpl
 import com.digimaster.featurea.data.service.MainRetrofit
 import com.digimaster.featurea.data.service.MainService
+import com.digimaster.featurea.domain.usecases.GetNewsUseCase
+import com.digimaster.featurea.domain.usecases.GetNotificationUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,16 +21,16 @@ class MainModule {
     @Provides
     @Singleton
     fun provideMainRepository(
-        mainRemoteDataSource: MainRemoteDataSource,
-        notificationDao: NotificationDao
+        mainService: MainService,
+        notificationDao: NotificationDao,
+        dataMapper: DataMapper
     )
             : MainRepository =
-        MainRepositoryImpl(mainRemoteDataSource, notificationDao)
+        MainRepositoryImpl(mainService, notificationDao, dataMapper)
 
     @Provides
     @Singleton
-    fun provideMainRemoteDataSource(mainService: MainService): MainRemoteDataSource =
-        MainRemoteDataSourceImpl(mainService)
+    fun provideMapper(): DataMapper = DataMapper()
 
     @Provides
     @Singleton

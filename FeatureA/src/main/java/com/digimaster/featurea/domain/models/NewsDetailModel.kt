@@ -1,7 +1,6 @@
-package com.digimaster.featurea.model
+package com.digimaster.featurea.domain.models
 
-data class NewsData(
-    val categoryNewsId: Int,
+data class NewsDetailModel(
     val categoryNewsName: String,
     val createdAt: String,
     val newsDescription: String,

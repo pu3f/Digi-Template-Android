@@ -25,7 +25,7 @@ class WelcomeActivity : AppCompatActivity() {
 
     private fun openMainActivity(context: Context) {
         val intent =
-            Intent(context, Class.forName("$BASE_PACKAGE_FEATUREA.ui.activity.MainActivity"))
+            Intent(context, Class.forName("$BASE_PACKAGE_FEATUREA.app.ui.activity.MainActivity"))
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         context.startActivity(intent)
         finish()

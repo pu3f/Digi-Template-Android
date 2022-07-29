@@ -1,4 +1,4 @@
-package com.digimaster.featurea.ui.fragment
+package com.digimaster.featurea.app.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

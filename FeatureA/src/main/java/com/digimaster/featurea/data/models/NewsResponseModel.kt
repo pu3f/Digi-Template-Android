@@ -1,10 +1,10 @@
-package com.digimaster.featurea.model
+package com.digimaster.featurea.data.models
 
 import com.google.gson.annotations.SerializedName
 
-data class NewsResponse(
+data class NewsResponseModel(
     val code: Int,
     @SerializedName("data")
-    val newsDataList: List<NewsData>,
+    val newsDataModelList: List<NewsDataModel>,
     val status: String
 )
