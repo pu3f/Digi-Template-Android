@@ -103,9 +103,6 @@ dependencies {
     api "androidx.datastore:datastore-preferences:1.0.0"
     api "androidx.datastore:datastore-preferences-rxjava2:1.0.0"
 
-    //splash screen
-    api "androidx.core:core-splashscreen:1.0.0"
-
     //Room
     api "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"

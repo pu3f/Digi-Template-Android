@@ -4,23 +4,23 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import com.digimaster.template.R
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.digimaster.template.databinding.ActivitySplashScreenBinding
 
-class SplashScreenActivity : AppCompatActivity() {
+class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
     private val BASE_PACKAGE_FEATUREA = "com.digimaster.featurea"
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
-        Handler().postDelayed({
-            openMainActivity(applicationContext)
-        }, 1500)
+        splashScreen.setKeepOnScreenCondition{ true }
+
+        openMainActivity(applicationContext)
     }
 
     private fun openMainActivity(context: Context) {
