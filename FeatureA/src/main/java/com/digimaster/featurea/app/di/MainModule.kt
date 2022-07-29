@@ -6,8 +6,6 @@ import com.digimaster.featurea.domain.repositories.MainRepository
 import com.digimaster.featurea.data.repository.MainRepositoryImpl
 import com.digimaster.featurea.data.service.MainRetrofit
 import com.digimaster.featurea.data.service.MainService
-import com.digimaster.featurea.domain.usecases.GetNewsUseCase
-import com.digimaster.featurea.domain.usecases.GetNotificationUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

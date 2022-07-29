@@ -3,7 +3,6 @@ package com.digimaster.featurea.app.viewmodel
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.digimaster.digicore.room.Notification
 import com.digimaster.digicore.utils.ViewState
 import com.digimaster.featurea.domain.models.NewsModel
 import com.digimaster.featurea.domain.models.NotificationModel

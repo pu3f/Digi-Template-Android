@@ -67,9 +67,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-//    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-//    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
-
     //hilt
     api "com.google.dagger:hilt-android:$daggerVersion"
     kapt "com.google.dagger:hilt-android-compiler:$daggerVersion"
