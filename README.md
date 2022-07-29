@@ -48,9 +48,11 @@ MVVM
 - preferred package structure
     - ui
         - activity
+            - observe view state
         - fragment
         - adapter
         - viewmodel
+            - use view state
     - data
         - di
         - remote (for api request data)
@@ -59,9 +61,9 @@ MVVM
         - service
     - model
     - util
-- use LiveData for commuication between activity/fragment with viewmodel
+- use LiveData for communication between activity/fragment with viewmodel
 - use RxJava/Coroutines for api request or room
-- use dependency injection
+- use dependency injection = dagger hilt
 
 Sqlite
 - use Room from Android Jetpack
