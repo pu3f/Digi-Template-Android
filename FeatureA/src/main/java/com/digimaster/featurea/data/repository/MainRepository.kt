@@ -1,8 +1,7 @@
-package com.digimaster.template.data.repository
+package com.digimaster.featurea.data.repository
 
 import com.digimaster.digicore.room.Notification
-import com.digimaster.template.model.NewsResponse
-import io.reactivex.Completable
+import com.digimaster.featurea.model.NewsResponse
 import io.reactivex.Flowable
 import io.reactivex.Single
 

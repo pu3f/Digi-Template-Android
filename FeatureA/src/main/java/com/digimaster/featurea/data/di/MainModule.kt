@@ -1,12 +1,12 @@
-package com.digimaster.template.data.di
+package com.digimaster.featurea.data.di
 
 import com.digimaster.digicore.room.NotificationDao
-import com.digimaster.template.data.remote.MainRemoteDataSource
-import com.digimaster.template.data.remote.MainRemoteDataSourceImpl
-import com.digimaster.template.data.repository.MainRepository
-import com.digimaster.template.data.repository.MainRepositoryImpl
-import com.digimaster.template.data.service.MainRetrofit
-import com.digimaster.template.data.service.MainService
+import com.digimaster.featurea.data.remote.MainRemoteDataSource
+import com.digimaster.featurea.data.remote.MainRemoteDataSourceImpl
+import com.digimaster.featurea.data.repository.MainRepository
+import com.digimaster.featurea.data.repository.MainRepositoryImpl
+import com.digimaster.featurea.data.service.MainRetrofit
+import com.digimaster.featurea.data.service.MainService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,6 +1,6 @@
-package com.digimaster.template.data.remote
+package com.digimaster.featurea.data.remote
 
-import com.digimaster.template.model.NewsResponse
+import com.digimaster.featurea.model.NewsResponse
 import io.reactivex.Single
 
 interface MainRemoteDataSource {

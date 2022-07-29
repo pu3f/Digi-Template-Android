@@ -1,6 +1,6 @@
-package com.digimaster.template.data.service
+package com.digimaster.featurea.data.service
 
-import com.digimaster.template.model.NewsResponse
+import com.digimaster.featurea.model.NewsResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 

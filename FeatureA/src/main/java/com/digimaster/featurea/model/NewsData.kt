@@ -1,4 +1,4 @@
-package com.digimaster.template.model
+package com.digimaster.featurea.model
 
 data class NewsData(
     val categoryNewsId: Int,

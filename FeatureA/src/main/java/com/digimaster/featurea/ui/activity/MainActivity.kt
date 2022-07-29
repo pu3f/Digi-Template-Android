@@ -1,4 +1,4 @@
-package com.digimaster.template.ui.activity
+package com.digimaster.featurea.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,8 +9,8 @@ import androidx.lifecycle.Observer
 import com.digimaster.digicore.AppNavigation
 import com.digimaster.digicore.room.Notification
 import com.digimaster.digicore.utils.ResponseStatus
-import com.digimaster.template.databinding.ActivityMainBinding
-import com.digimaster.template.ui.viewmodel.MainViewModel
+import com.digimaster.featurea.databinding.ActivityMainBinding
+import com.digimaster.featurea.ui.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

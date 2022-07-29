@@ -1,12 +1,12 @@
-package com.digimaster.template.ui.viewmodel
+package com.digimaster.featurea.ui.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.digimaster.digicore.room.Notification
 import com.digimaster.digicore.utils.ViewState
-import com.digimaster.template.data.repository.MainRepository
-import com.digimaster.template.model.NewsResponse
+import com.digimaster.featurea.data.repository.MainRepository
+import com.digimaster.featurea.model.NewsResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

@@ -6,6 +6,10 @@
         <activity
             android:name=".FeatureAActivity"
             android:exported="false" />
+        <activity
+            android:name="com.digimaster.featurea.ui.activity.MainActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

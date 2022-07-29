@@ -1,6 +1,6 @@
-package com.digimaster.template.data.service
+package com.digimaster.featurea.data.service
 
-import com.digimaster.template.BuildConfig
+import com.digimaster.featurea.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
