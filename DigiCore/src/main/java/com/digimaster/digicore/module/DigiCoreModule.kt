@@ -1,6 +1,8 @@
 package com.digimaster.digicore.module
 
 import android.content.Context
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.room.Room
 import com.digimaster.digicore.room.NotificationDao
 import com.digimaster.digicore.room.database.AppDatabase
@@ -9,6 +11,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import java.util.prefs.Preferences
 import javax.inject.Singleton
 
 @Module
@@ -23,4 +26,5 @@ class DigiCoreModule {
     @Singleton
     fun provideAppDatabase(@ApplicationContext appContext: Context): AppDatabase =
         Room.databaseBuilder(appContext, AppDatabase::class.java, "templateDatabase").build()
+
 }

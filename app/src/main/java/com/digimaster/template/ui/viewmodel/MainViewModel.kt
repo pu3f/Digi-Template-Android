@@ -4,13 +4,12 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.digimaster.digicore.room.Notification
+import com.digimaster.digicore.utils.ViewState
 import com.digimaster.template.data.repository.MainRepository
 import com.digimaster.template.model.NewsResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.functions.Action
-import io.reactivex.functions.Consumer
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subscribers.DisposableSubscriber
@@ -18,27 +17,27 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(private val mainRepository: MainRepository): ViewModel() {
-    private val news = MutableLiveData<NewsResponse>()
-    private val notifications = MutableLiveData<List<Notification>>()
+    private val news = MutableLiveData<ViewState<NewsResponse>>()
+    private val notifications = MutableLiveData<ViewState<List<Notification>>>()
     private val compositeDisposable = CompositeDisposable()
-    private val isError = MutableLiveData<Boolean>()
 
     fun loadNews(){
+        news.value = ViewState.loading(null)
+
         compositeDisposable.add(
             mainRepository.getNews().subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSingleObserver<NewsResponse>(){
                     override fun onSuccess(t: NewsResponse) {
                         if (t.code == 200) {
-                            isError.value = false
-                            news.value = t
+                            news.value = ViewState.success(t)
                         } else {
-                            isError.value = true
+                            news.value = ViewState.error(t.status, null)
                         }
                     }
 
                     override fun onError(e: Throwable) {
-                        isError.value = true
+                        news.value = ViewState.error("${e.message}", null)
                     }
 
                 }
@@ -51,23 +50,22 @@ class MainViewModel @Inject constructor(private val mainRepository: MainReposito
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSubscriber<List<Notification>>(){
-                    override fun onNext(t: List<Notification>?) {
-                        Log.i("MainViewModel", "onNext $t")
-                        t.let {
-                            notifications.value = it
+                    override fun onNext(t: List<Notification>) {
+                        if(t.isNotEmpty()){
+                            notifications.value = ViewState.success(t)
+                        }else{
+                            notifications.value = ViewState.empty("no data")
                         }
                     }
 
                     override fun onError(t: Throwable?) {
-                        t?.printStackTrace()
-                        Log.i("MainViewModel", "Error $t")
+                        notifications.value = ViewState.error("$t", null)
                     }
 
                     override fun onComplete() {
                     }
 
                 })
-
         )
     }
 
@@ -89,11 +87,9 @@ class MainViewModel @Inject constructor(private val mainRepository: MainReposito
         )
     }
 
-    fun getNotifications(): MutableLiveData<List<Notification>> = notifications
+    fun getNotifications(): MutableLiveData<ViewState<List<Notification>>> = notifications
 
-    fun getNews(): MutableLiveData<NewsResponse> = news
-
-    fun isError(): MutableLiveData<Boolean> = isError
+    fun getNews(): MutableLiveData<ViewState<NewsResponse>> = news
 
     override fun onCleared() {
         super.onCleared()

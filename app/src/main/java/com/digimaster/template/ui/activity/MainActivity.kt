@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.digimaster.digicore.AppNavigation
 import com.digimaster.digicore.room.Notification
+import com.digimaster.digicore.utils.ResponseStatus
 import com.digimaster.template.databinding.ActivityMainBinding
 import com.digimaster.template.ui.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -50,19 +51,66 @@ class MainActivity : AppCompatActivity() {
 
     private fun setObserver() {
         viewModel.getNews().observe(this, Observer {
-            with(it.newsDataList) {
-                if (this.isNotEmpty()) {
-                    for (news in this) {
-                        Log.i("MainActivity", "News title ${news.newsName}")
+            when (it.status) {
+                ResponseStatus.SUCCESS -> {
+                    /*
+                        handle data if success here
+                     */
+                    it.data?.newsDataList?.let { newsList ->
+                        for (news in newsList) {
+                            Log.i("MainActivity", "News Title ${news.newsName}")
+                        }
                     }
+                }
+                ResponseStatus.ERROR -> {
+                    /*
+                        handle error state here
+                     */
+                    Toast.makeText(applicationContext, "Error ${it.message}", Toast.LENGTH_SHORT)
+                        .show()
+                }
+                ResponseStatus.EMPTY -> {
+                    /*
+                       handle empty state here
+                    */
+                    Toast.makeText(applicationContext, "${it.message}", Toast.LENGTH_SHORT).show()
+                }
+                ResponseStatus.LOADING -> {
+                    Toast.makeText(applicationContext, "Loading", Toast.LENGTH_SHORT).show()
+                    /*
+                        show loading state/progress here
+                     */
                 }
             }
         })
 
         viewModel.getNotifications().observe(this, Observer {
-            with(it){
-                for(notification in this){
-                    Log.i("Main Activity", "Notification title ${notification.title}")
+            when (it.status) {
+                ResponseStatus.SUCCESS -> {
+                    it.data?.let {notifications ->
+                        for(notification in notifications){
+                            Log.i("MainActivity", "Notifications $notification")
+                        }
+                    }
+                }
+                ResponseStatus.ERROR -> {
+                    /*
+                        handle error state here
+                     */
+                    Toast.makeText(applicationContext, "Error ${it.message}", Toast.LENGTH_SHORT)
+                        .show()
+                }
+                ResponseStatus.LOADING -> {
+                    Toast.makeText(applicationContext, "Loading", Toast.LENGTH_SHORT).show()
+                    /*
+                        show loading state/progress here
+                     */
+                }
+                ResponseStatus.EMPTY -> {
+                    /*
+                     handle empty state here
+                    */
+                    Toast.makeText(applicationContext, "${it.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         })
